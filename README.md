@@ -15,6 +15,6 @@ This repository contains the source code for a fullstack web notes app developed
 
 ## Getting Started:
   * Clone the repository
-  * Navigate to the backend directorie and Install dependencies using Pipenv for Django: `pipenv install` then `pipenv shell` to activate the virtual env
+  * Navigate to the backend directorie and Install dependencies using : `.\env\Scripts\activate` then `pip install -r requirements.txt`
   * Navigate to the frontend directorie and Install npm dependencies for React.js: `npm install`
   * Run the development server for both frontend and backend: `python manage.py runserver` and `npm start`
