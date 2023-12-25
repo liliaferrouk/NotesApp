@@ -2,7 +2,11 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div className='app-header'>
+      <h3>
+      Note List
+      </h3>
+    </div>
   )
 }
 

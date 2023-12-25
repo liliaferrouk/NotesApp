@@ -1,5 +1,6 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import {ReactComponent as Arrowleft} from '../assets/arrow-left.svg'
 
 function NotePage() {
     const { id } = useParams();
@@ -13,7 +14,16 @@ function NotePage() {
 
 
   return (
-    <div>{note?.body}</div>
+    <div className='note'>
+      <div className='note-header'>
+        <h3>
+          <Link to="/">
+            <Arrowleft/>
+          </Link>
+        </h3>
+      </div>
+    <textarea defaultValue={note?.body}></textarea>
+    </div>
   )
 }
 

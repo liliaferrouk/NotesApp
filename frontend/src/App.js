@@ -6,15 +6,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="container dark">
+      <div className='app'>
       <Header/>
-      <Router>
         <Routes>
           <Route path='/' exact element={<NotesListPage/>}/>
           <Route path='/note/:id' exact element={<NotePage/>}/>
         </Routes>
-      </Router>
-    </div>
+      </div>
+      </div>
+    </Router>
   );
 }
 
