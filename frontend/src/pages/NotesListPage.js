@@ -5,7 +5,7 @@ function NotesListPage() {
     const [notes, setNotes] = React.useState([])
 
     React.useEffect(()=>{
-        fetch("http://127.0.0.1:8000/api/notes/")
+        fetch("/api/notes/")
              .then(res => res.json())
              .then(data => setNotes(data) )
     },[])
