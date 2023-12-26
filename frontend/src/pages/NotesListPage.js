@@ -13,8 +13,7 @@ function NotesListPage() {
   return (
     <div className='notes'>
         <div className='notes-haeder'>
-          <h2 className='notes-title'>&#9782; Notes</h2>
-          <p className='notes-count'>{notes.length}</p>
+          <h2 className='notes-title'>&#9782; Notes <span className='notes-count'>{notes.length}</span></h2>
         </div>
         <div className='notes-list'>
             {notes.map((note,index)=>(

@@ -4,7 +4,12 @@ import {ReactComponent as Arrowleft} from '../assets/arrow-left.svg'
 
 function NotePage() {
     const { id } = useParams();
-    const [note, setNote] = React.useState(null)
+    const [note, setNote] = React.useState({
+      "id": 0,
+      "body": "",
+      "updated": "",
+      "created": ""
+    })
 
     React.useEffect(()=>{
       if (id === 'new') return
@@ -63,10 +68,10 @@ function NotePage() {
           </Link>
           { id !=='new' ? (
             <Link to="/">
-            <button onClick={deleteNote} style={{ marginLeft: '500%', }}>DELETE</button>
+            <button onClick={deleteNote} style={{ paddingLeft: '500%', }}>DELETE</button>
             </Link>)   : (
             <Link to="/">
-            <button onClick={hundelSubmit} style={{ marginLeft: '500%', }}>Done</button>
+            <button onClick={hundelSubmit} style={{ paddingLeft: '750%', }}>Done</button>
             </Link>
             )
           }
